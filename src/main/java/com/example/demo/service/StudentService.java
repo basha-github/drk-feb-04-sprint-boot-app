@@ -18,4 +18,9 @@ public class StudentService {
 		stuRepo.save(stuData);
 	}
 
+	public Student fetchStudent(int rollno) {
+		
+		return stuRepo.findById(rollno).orElse(new Student());
+	}
+
 }
